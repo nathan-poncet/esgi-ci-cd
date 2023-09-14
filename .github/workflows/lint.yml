@@ -1,0 +1,11 @@
+name: Lint
+on:
+  - push
+jobs:
+  lint:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          npm install
+          npm run lint
